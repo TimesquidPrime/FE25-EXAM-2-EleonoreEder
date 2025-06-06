@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Planner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <!-- -------------------------navigation------------------------ -->
+
+      <nav>
+        <div class="navbar">
+          <button id="menu-toggle"><i class="fas fa-bars"></i></button>
+          <ul class="navlinks">
+            <li><a href="#">MyPlanner</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tasks</a></li>
+            <li><a href="#">Settings</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- -----------------------hero section------------------------- -->
+
+      <div class="hero">
+        <img src="./images/planner.jpg" alt="hero-image" />
+        <p id="hero-text">Weekly planner</p>
+      </div>
+    </div>
+
+    <!-- ------------------------main content------------------------ -->
+
+    <div class="container flex-wrap align-content-center py-3">
+      <div
+        id="result"
+        class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 p-3 gy-3"
+      ></div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="socialicons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-google"></i></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></i></a>
+      </div>
+      <div class="newsletter">
+            <label for="newsletter-subscribe">Sign up for our newsletter: </label>
+            <input name="newsletter-subscribe" id="newsletter-subscribe" type="text">
+            <button class="btn btn-outline-light btn-sm">Submit</button>
+        </div>
+        
+      <p id="copyright">© Eleonore Eder</p>
+      </div>
+    </footer>
+
+    <!-- -------------------------scripts---------------------------- -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>

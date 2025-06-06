@@ -1,0 +1,102 @@
+nav {
+  background-color: black;
+  height: 60px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+}
+
+label {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+input {
+  height: 1.5rem;
+}
+
+.navlinks {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.socialicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding-bottom: 0.5rem;
+}
+
+.hero {
+  width: 100vw;
+  position: relative;
+}
+
+.footer-container {
+  background-color: black;
+  padding: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+#menu-toggle {
+  background: transparent;
+  border-color: transparent;
+  color: white;
+}
+
+#hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.8rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  text-align: center;
+}
+
+#copyright {
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+}
+
+@media (width < 768px) {
+  #hero-text {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+}
+
+@media (width < 480px) {
+  #hero-text {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
