@@ -64,6 +64,8 @@ const tasks = [
   },
 ];
 
+sortTasks();
+
 function showCards() {
   tasks.forEach((val) => {
     document.getElementById("result").innerHTML += `
@@ -78,7 +80,7 @@ function showCards() {
             <p class="card-text"><i class="fa-solid fa-triangle-exclamation"></i> Priority level:  <button class="btn btn-success btn-sm priority-btn"><span class="priorityNum">${val.priority}</span></button></p>
             <hr>
             <div class="d-flex justify-content-between">
-            <button class="btn btn-primary btn-sm"><i class="fa-solid fa-trash"></i> Delete</button>
+            <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Delete</button>
             <button class="btn btn-secondary btn-sm done-btn"><i class="fa-regular fa-circle-check"></i> Done</button>
             </div>
           </div>
@@ -86,6 +88,7 @@ function showCards() {
     </div>
     `;
   });
+  increasePriority();
 }
 
 showCards();
@@ -106,8 +109,6 @@ function increasePriority() {
     });
   });
 }
-
-increasePriority();
 
 function changeColor(index) {
   if (tasks[index].priority <= 1) {
@@ -130,15 +131,27 @@ function taskDone() {
 
   doneBtns.forEach((btn, index) => {
     btn.addEventListener("click", function () {
-      doneBtns[index].classList.add("bg-success");
+      doneBtns[index].classList.add("bg-primary");
       tasks[index].priority = 0;
       document.querySelectorAll(".priorityNum")[index].innerText =
         tasks[index].priority;
       document
         .querySelectorAll(".priority-btn")
-        [index].classList.add("bg-success");
+        [index].classList.remove("bg-warning", "bg-danger", "bg-success");
+      document
+        .querySelectorAll(".priority-btn")
+        [index].classList.add("bg-secondary");
     });
   });
 }
 
 taskDone();
+
+function sortTasks() {
+  document.querySelector(".sort-btn").addEventListener("click", function () {
+    tasks.sort((a, b) => b.priority - a.priority);
+    console.log(tasks);
+    document.getElementById("result").innerHTML = "";
+    showCards();
+  });
+}
